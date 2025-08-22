@@ -1,0 +1,26 @@
+<section class="pb-5">
+    <div class="flex flex-row justify-between border-b border-black border-b-[1px] pb-2">
+        <h5 class="font-bold text-base leading-6 tracking-[0.5px]">
+            Upload Logos 
+        </h5>
+        <div class="flex flex-row gap-2">
+            {{ form_widget(form.brandLogoNotCreated, {
+                attr: {
+                    class: 'appearance-none w-5 h-5 border-2 border-black/60 rounded-sm flex items-center justify-center checked:bg-black checked:border-black checked:before:content-["✓"] checked:before:text-white checked:before:text-sm'
+                }
+            }) }}
+            <p class="font-normal text-sm leading-5 tracking-normal text-center align-middle text-black">Not Yet Created</p>
+        </div>
+    </div>
+
+    <div class="my-7">
+        <p class="font-normal text-[16px] leading-6 tracking-[0.5px] align-middle text-[#000000DE]">The file types we are looking for include the art layers. They generally end in .Ai, .SVG, .EPS, or .PDF</p>
+        <label class="inline-flex items-center h-[50px] rounded-md px-4 gap-4 opacity-100 
+                    bg-[#3F51B5] text-white font-medium text-sm leading-9 tracking-[2.5px] 
+                    text-center align-middle uppercase mt-3 cursor-pointer">
+            Upload
+            {{ form_widget(form.uploadLogo, { 'attr': {'class': 'hidden'} }) }}
+        </label>
+
+    </div>
+</section>

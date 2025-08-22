@@ -1,0 +1,39 @@
+<section class="pb-5">
+    <div class="flex flex-row justify-between border-b border-black border-b-[1px] pb-2">
+        <h5 class="font-bold text-base leading-6 tracking-[0.5px]">
+            Brand Fonts
+        </h5>
+        <div class="flex flex-row gap-2">
+            {{ form_widget(form.brandFontNotCreated, {
+                attr: {
+                    class: 'appearance-none w-5 h-5 border-2 border-black/60 rounded-sm flex items-center justify-center checked:bg-black checked:border-black checked:before:content-["✓"] checked:before:text-white checked:before:text-sm'
+                }
+            }) }}
+            <p class="font-normal text-sm leading-5 tracking-normal text-center align-middle text-black">Not Yet Created</p>
+        </div>
+    </div>
+
+    <div class="my-7">
+        <div>
+            {{ form_widget(form.brandFontName, {
+                attr: {
+                    placeholder: 'Font Name',
+                    class: 'w-full h-[50px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                            placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE]
+                            focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                            active:border-blue-500 active:ring-2 active:ring-blue-200'
+                }
+            }) }}
+        </div>
+
+        <div class="mt-5">
+            <p class="font-normal text-[16px] leading-6 tracking-[0.5px] align-middle text-[#000000DE]">If you have the font files, please upload them here.</p>
+            <label class="inline-flex items-center h-[50px] rounded-md px-4 gap-4 opacity-100 
+                    bg-[#3F51B5] text-white font-medium text-sm leading-9 tracking-[2.5px] 
+                    text-center align-middle uppercase mt-3 cursor-pointer">
+                Upload
+                {{ form_widget(form.uploadFont, { 'attr': {'class': 'hidden'} }) }}
+            </label>
+        </div>
+    </div>
+</section>

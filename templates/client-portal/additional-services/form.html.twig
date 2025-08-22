@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <main id="client-info" data-tabs-target="content">
+        
+        <div class="container mx-auto flex flex-col md:flex-row">
+            <div class="md:block md:w-1/4 p-4"></div>
+
+            <div class="w-full md:w-1/2 p-4">
+                <h1 class="font-normal text-[34px] leading-[40px] tracking-[0.25px] text-[#000000DE]">
+                    Additional Services
+                </h1>
+            </div>
+
+            <div class="hidden md:block md:w-1/4 p-4"></div>
+        </div>
+
+        <div class="container mx-auto flex flex-col md:flex-row">
+            <div class="w-full md:w-1/4 p-4">
+                <div class="flex flex-col justify-start items-start gap-[75px]">
+                    <img src="{{ asset('assets/images/icons/email-service.svg') }}" alt="Email Service" class="w-[150px] h-auto -rotate-[15.17deg] opacity-100">
+                    <img src="{{ asset('assets/images/icons/digital-paid-ads.svg') }}" alt="Email Service" class="w-[125px] h-auto rotate-[7.55deg] opacity-100">
+                    <img src="{{ asset('assets/images/icons/call-recording.svg') }}" alt="Email Service" class="w-[80px] h-auto -rotate-[3.5deg] opacity-100">
+                    <img src="{{ asset('assets/images/icons/ai-integrations.svg') }}" alt="Email Service" class="w-[150px] h-auto rotate-[15.27deg] opacity-100">
+                    <img src="{{ asset('assets/images/icons/e-commerce.svg') }}" alt="Email Service" class="w-[150px] h-auto -rotate-[10.97deg] opacity-100">
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 p-4">
+
+                <!-- Services -->
+                {% include 'client-portal/additional-services/services.html.twig' %}
+
+                <!-- Bottom Action Area -->
+                {% include 'client-portal/partials/footer-actions.html.twig' with {
+                    route_name: '',
+                } %}
+
+            </div>
+
+            <div class="w-full md:w-1/4 p-4">
+                <div class="flex flex-col justify-end items-end gap-[75px]">
+                    <img src="{{ asset('assets/images/icons/text-messaging.svg') }}" alt="Email Service" class="w-[125px] h-auto rotate-[11.46deg] opacity-100">
+                    <img src="{{ asset('assets/images/icons/videography.svg') }}" alt="Email Service" class="w-[100px] h-auto -rotate-[2.98deg] opacity-100">
+                    <img src="{{ asset('assets/images/icons/barter-trade.svg') }}" alt="Email Service" class="w-[120px] h-auto rotate-[7.01deg] opacity-100">
+                    <img src="{{ asset('assets/images/icons/social-chat-bots.svg') }}" alt="Email Service" class="w-[150px] h-auto -rotate-[14.78deg] opacity-100">
+                    <img src="{{ asset('assets/images/icons/multilingual.svg') }}" alt="Email Service" class="w-[150px] h-auto rotate-[14.52deg] opacity-100">
+                    <img src="{{ asset('assets/images/icons/digital-signage.svg') }}" alt="Email Service" class="w-[150px] h-auto -rotate-[8.62deg] opacity-100">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+<section>
+    <div class="flex flex-row justify-between border-b border-black border-b-[1px] pb-2">
+        <h5 class="font-bold text-base leading-6 tracking-[0.5px]">
+            Website Direction Preferences
+        </h5>
+        <div class="flex flex-row gap-2">
+            {{ form_widget(form.websitePrefrencesNotCreated, {
+                attr: {
+                    class: 'appearance-none w-5 h-5 border-2 border-black/60 rounded-sm flex items-center justify-center checked:bg-black checked:border-black checked:before:content-["✓"] checked:before:text-white checked:before:text-sm'
+                }
+            }) }}
+            <p class="font-normal text-sm leading-5 tracking-normal text-center align-middle text-black">Not Yet Created</p>
+        </div>
+    </div>
+
+    <div class="my-7">
+        <p class="font-normal text-[16px] leading-6 tracking-[0.5px] align-middle text-[#000000DE]">Select a box to use our color picker</p>
+        <div class="flex flex-col items-start space-y-6">
+            <div class="flex space-x-6">
+                <!-- Color Picker Box -->
+                <div class="flex flex-col items-center gap-2.5">
+                    <button 
+                        class="h-[50px] rounded-md px-4 gap-4 opacity-100 
+                                bg-[#3F51B5] text-white font-medium text-sm leading-9 tracking-[2.5px] 
+                                text-center align-middle uppercase mt-3">
+                        Website Background
+                    </button>
+                    <div class="flex flex-row items-center gap-2.5">
+                        <div class="flex flex-col items-center">
+                            <input type="color" value="#000000" class="w-12 h-12 border rounded cursor-pointer">
+                            <p class="text-[9px] text-[#00000061] mt-1">#000000</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <input type="color" value="#000000" class="w-12 h-12 border rounded cursor-pointer">
+                            <p class="text-[9px] text-[#00000061] mt-1">#000000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center gap-2.5">
+                    <button 
+                        class="h-[50px] rounded-md px-4 gap-4 opacity-100 
+                                bg-[#3F51B5] text-white font-medium text-sm leading-9 tracking-[2.5px] 
+                                text-center align-middle uppercase mt-3">
+                        Buttons
+                    </button>
+                    <div class="flex flex-col items-center">
+                        <input type="color" value="#000000" class="w-12 h-12 border rounded cursor-pointer">
+                        <p class="text-[9px] text-[#00000061] mt-1">#000000</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center gap-2.5">
+                    <button 
+                        class="h-[50px] rounded-md px-4 gap-4 opacity-100 
+                                bg-[#3F51B5] text-white font-medium text-sm leading-9 tracking-[2.5px] 
+                                text-center align-middle uppercase mt-3">
+                        Accents
+                    </button>
+                    <div class="flex flex-col items-center">
+                        <input type="color" value="#000000" class="w-12 h-12 border rounded cursor-pointer">
+                        <p class="text-[9px] text-[#00000061] mt-1">#000000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

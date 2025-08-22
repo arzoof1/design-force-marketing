@@ -1,0 +1,63 @@
+<section class="pb-5">
+    <div class="flex flex-row justify-between border-b border-black border-b-[1px] pb-2">
+        <div class="flex flex-row gap-2">
+            <img src="{{ asset('assets/images/icons/bing.svg') }}" alt="bing" class="w-6 h-6">
+            <h5 class="font-bold text-base leading-6 tracking-[0.5px]">
+                Bing
+            </h5>
+        </div>
+        <div class="flex flex-row gap-2">
+            {{ form_widget(form.bingAccountNotCreated, {
+                attr: {
+                    class: 'appearance-none w-5 h-5 border-2 border-black/60 rounded-sm flex items-center justify-center checked:bg-black checked:border-black checked:before:content-["✓"] checked:before:text-white checked:before:text-sm'
+                }
+            }) }}
+            <p class="font-normal text-sm leading-5 tracking-normal text-center align-middle text-black">Not Yet Created</p>
+        </div>
+    </div>
+
+    <div class="my-7">
+        <div class="flex flex-col gap-2.5">
+
+            <!-- Username * -->
+            <div>
+                {{ form_widget(form.bingUserName, {
+                    attr: {
+                        placeholder: 'Username *',
+                        class: 'w-full h-[50px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                                placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE]
+                                focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                active:border-blue-500 active:ring-2 active:ring-blue-200'
+                    }
+                }) }}
+            </div>
+
+            <!-- Password * -->
+            <div>
+                {{ form_widget(form.bingPassword, {
+                    attr: {
+                        placeholder: 'Password *',
+                        class: 'w-full h-[50px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                                placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE]
+                                focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                active:border-blue-500 active:ring-2 active:ring-blue-200'
+                    }
+                }) }}
+            </div>
+
+            <!-- Confirm Password * -->
+            <div>
+                {{ form_widget(form.bingConfirmPassword, {
+                    attr: {
+                        placeholder: 'ConfirmPassword *',
+                        class: 'w-full h-[50px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                                placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE]
+                                focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                active:border-blue-500 active:ring-2 active:ring-blue-200'
+                    }
+                }) }}
+            </div>
+
+        </div>
+    </div>
+</section>

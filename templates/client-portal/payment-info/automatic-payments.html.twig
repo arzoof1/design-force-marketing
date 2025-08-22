@@ -1,0 +1,35 @@
+<section>
+    <div class="border-b border-black border-b-[1px] pb-1">
+        <h5 class="font-bold text-base leading-6 tracking-[0.5px]">
+            Authorization for Automatic Payments
+        </h5>
+    </div>
+
+    <form class="my-7">
+        <div class="flex flex-col gap-7">
+            <div class="flex flex-col gap-5">
+
+                <!-- Description -->
+                <div>
+                    <p class="font-normal text-base leading-6 tracking-[0.5px] text-[#000000DE]">
+                        By entering and submitting your bank account and/or credit card information, you authorize Design Force Marketing and its designated payment processor to initiate electronic debits from the bank account you have provided and/or charges to the credit card you have provided for the monthly payment amount required under this agreement. You acknowledge and agree that this authorization will remain in full force and effect for the duration of the agreement, including any extensions or renewals, or until all amounts owed have been paid in full. If an ACH debit is returned or rejected for any reason, you authorize Design Force Marketing to initiate a charge to your credit card for the payment amount. You agree to maintain accurate and current payment information and to ensure sufficient funds or available credit to cover each payment. Returned or rejected payments may result in additional fees as permitted by law.
+                    </p>
+                </div>
+
+                <!-- Date of Birth -->
+                <div>
+                    {{ form_widget(form.birthDate, {
+                        attr: {
+                            placeholder: 'Date of Birth *',
+                            class: 'w-full h-[50px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                                    placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE]
+                                    focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                    active:border-blue-500 active:ring-2 active:ring-blue-200'
+                        }
+                    }) }}
+                    <p class="font-normal text-xs leading-5 tracking-[0.4px] text-[#3F51B5]">Enter your date of birth for authorization</p>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

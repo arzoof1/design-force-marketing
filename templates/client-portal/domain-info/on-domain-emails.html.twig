@@ -1,0 +1,70 @@
+<section class="pb-5">
+
+    <div class="border-b border-black border-b-[1px] pb-1">
+        <h5 class="font-bold text-base leading-6 tracking-[0.5px]">
+            On-Domain Emails (Required)
+        </h5>
+    </div>
+
+    <div class="flex flex-col mt-7 mb-9">
+        
+        <div class="flex flex-col gap-2.5">
+
+            <!-- Do you have emails set up on any of these domains?  -->
+            <p class="font-normal text-base leading-5 tracking-normal align-middle text-black">Do you have emails set up on any of these domains?</p>
+            <div class="flex flex-row gap-6 px-2 py-7">
+                {% for choice in form.emailsOnDomains %}
+                    <div class="flex flex-row gap-5">
+                        <div class="flex flex-row items-center gap-2.5">
+                            {{ form_widget(choice, {
+                                attr: { class: 'appearance-none w-4 h-4 rounded-full border-2 border-black/60
+                                                flex items-center justify-center
+                                                checked:border-black checked:bg-black
+                                                checked:before:content-[""] checked:before:w-2 checked:before:h-2
+                                                checked:before:rounded-full checked:before:bg-white
+                                                focus:ring-2 focus:ring-blue-200' }
+                            }) }}
+                            <p class="font-normal text-sm leading-5 tracking-normal text-center align-middle text-black">{{ form_label(choice) }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- Email Provider -->
+            <div>
+                {{ form_widget(form.emailProvider, {
+                    attr: {
+                        class: 'w-full h-[50px] rounded border border-[#0000006B] px-2 py-3 opacity-100 text-base leading-6 tracking-[0.5px] align-middle text-[#000000DE]
+                                focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                active:border-blue-500 active:ring-2 active:ring-blue-200'
+                    }
+                }) }}
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="border-b border-black border-b-[1px] pb-1">
+        <h5 class="font-bold text-base leading-6 tracking-[0.5px]">
+            We Recommend
+        </h5>
+    </div>
+    
+    <div class="my-7">
+        <div class="flex flex-row items-start gap-10">
+            <div class="flex flex-col items-center gap-2.5">
+                <img src="{{ asset('assets/images/icons/google.svg') }}" alt="Google" class="w-[60px] h-[60px]">
+                <p class="font-normal text-base leading-5 text-center tracking-normal align-middle text-black">Google<br>Workspace</p>
+            </div>
+            <div class="flex flex-col items-center gap-2.5">
+                <img src="{{ asset('assets/images/icons/microsoft365.svg') }}" alt="Microsoft 365" class="w-[60px] h-[60px]">
+                <p class="font-normal text-base leading-5 text-center tracking-normal align-middle text-black">Microsoft<br>365</p>
+            </div>
+            <div class="flex flex-col items-center gap-2.5">
+                <img src="{{ asset('assets/images/icons/rackspace.svg') }}" alt="Rackspace" class="w-[60px] h-[60px]">
+                <p class="font-normal text-base leading-5 text-center tracking-normal align-middle text-black">Rackspace</p>
+            </div>
+        </div>
+    </div>
+
+</section>

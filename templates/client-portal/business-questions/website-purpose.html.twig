@@ -1,0 +1,110 @@
+<div data-form-steps-target="step" class="hidden">
+    <div class="flex flex-col gap-5">
+        <!-- Question 1 -->
+        <div class="space-y-4">
+            <div class="flex items-start space-x-5">
+                <div class="flex-shrink-0 mt-1">
+                    <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.1667 14.1143V15.341C28.165 18.2162 27.234 21.0139 25.5124 23.3167C23.7909 25.6196 21.371 27.3043 18.6138 28.1195C15.8566 28.9347 12.9097 28.8368 10.2126 27.8404C7.51557 26.844 5.21287 25.0024 3.64795 22.5904C2.08302 20.1783 1.33972 17.3251 1.5289 14.4561C1.71808 11.5871 2.82961 8.85607 4.69771 6.6704C6.5658 4.48472 9.09038 2.96147 11.8949 2.32783C14.6995 1.69418 17.6337 1.98408 20.26 3.1543M28.1667 4.6743L14.8333 18.021L10.8333 14.021" stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="flex-1">
+                    <label for="target-audience" class="block font-normal text-[16px] leading-[24px] tracking-[0.5px] align-middle text-gray-700 mb-2">
+                        {{ form_label(form.websitePurpose) }}
+                    </label>
+                    {{ form_widget(form.websitePurpose, {
+                        attr: {
+                            placeholder: 'Ex. Women age 35-55 located in Grand Haven, MI',
+                            class: 'w-full h-[120px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                                    placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE] resize-none
+                                    focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                    active:border-blue-500 active:ring-2 active:ring-blue-200'
+                        }
+                    }) }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="space-y-4">
+            <div class="flex items-start space-x-5">
+                <div class="flex-shrink-0 mt-1">
+                    <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.1667 14.1143V15.341C28.165 18.2162 27.234 21.0139 25.5124 23.3167C23.7909 25.6196 21.371 27.3043 18.6138 28.1195C15.8566 28.9347 12.9097 28.8368 10.2126 27.8404C7.51557 26.844 5.21287 25.0024 3.64795 22.5904C2.08302 20.1783 1.33972 17.3251 1.5289 14.4561C1.71808 11.5871 2.82961 8.85607 4.69771 6.6704C6.5658 4.48472 9.09038 2.96147 11.8949 2.32783C14.6995 1.69418 17.6337 1.98408 20.26 3.1543M28.1667 4.6743L14.8333 18.021L10.8333 14.021" stroke="#E3EEF9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="flex-1">
+                    <label for="competitors" class="block font-normal text-[16px] leading-[24px] tracking-[0.5px] align-middle text-gray-700 mb-2">
+                        {{ form_label(form.websiteStrategy) }}
+                    </label>
+                    {{ form_widget(form.websiteStrategy, {
+                        attr: {
+                            placeholder: 'Ex. McDonalds, James Hardie, etc.',
+                            class: 'w-full h-[120px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                                    placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE] resize-none
+                                    focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                    active:border-blue-500 active:ring-2 active:ring-blue-200'
+                        }
+                    }) }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="space-y-4">
+            <div class="flex items-start space-x-5">
+                <div class="flex-shrink-0 mt-1">
+                    <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.1667 14.1143V15.341C28.165 18.2162 27.234 21.0139 25.5124 23.3167C23.7909 25.6196 21.371 27.3043 18.6138 28.1195C15.8566 28.9347 12.9097 28.8368 10.2126 27.8404C7.51557 26.844 5.21287 25.0024 3.64795 22.5904C2.08302 20.1783 1.33972 17.3251 1.5289 14.4561C1.71808 11.5871 2.82961 8.85607 4.69771 6.6704C6.5658 4.48472 9.09038 2.96147 11.8949 2.32783C14.6995 1.69418 17.6337 1.98408 20.26 3.1543M28.1667 4.6743L14.8333 18.021L10.8333 14.021" stroke="#E3EEF9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="flex-1">
+                    <label for="slogan" class="block font-normal text-[16px] leading-[24px] tracking-[0.5px] align-middle text-gray-700 mb-2">
+                    {{ form_label(form.websiteFeatures) }}
+                    </label>
+                    {{ form_widget(form.websiteFeatures, {
+                        attr: {
+                            placeholder: 'Ex. We have got you covered!',
+                            class: 'w-full h-[120px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                                    placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE] resize-none
+                                    focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                    active:border-blue-500 active:ring-2 active:ring-blue-200'
+                        }
+                    }) }}
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Question 4 -->
+        <div class="space-y-4">
+            <div class="flex items-start space-x-5">
+                <div class="flex-shrink-0 mt-1">
+                    <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.1667 14.1143V15.341C28.165 18.2162 27.234 21.0139 25.5124 23.3167C23.7909 25.6196 21.371 27.3043 18.6138 28.1195C15.8566 28.9347 12.9097 28.8368 10.2126 27.8404C7.51557 26.844 5.21287 25.0024 3.64795 22.5904C2.08302 20.1783 1.33972 17.3251 1.5289 14.4561C1.71808 11.5871 2.82961 8.85607 4.69771 6.6704C6.5658 4.48472 9.09038 2.96147 11.8949 2.32783C14.6995 1.69418 17.6337 1.98408 20.26 3.1543M28.1667 4.6743L14.8333 18.021L10.8333 14.021" stroke="#E3EEF9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="flex-1">
+                    <label for="slogan" class="block font-normal text-[16px] leading-[24px] tracking-[0.5px] align-middle text-gray-700 mb-2">
+                    {{ form_label(form.websiteYouLike) }}
+                    </label>
+                    {{ form_widget(form.websiteYouLike, {
+                        attr: {
+                            placeholder: 'Ex. We have got you covered!',
+                            class: 'w-full h-[120px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                                    placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE] resize-none
+                                    focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                    active:border-blue-500 active:ring-2 active:ring-blue-200'
+                        }
+                    }) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Navigation -->
+    <div class="flex justify-between mt-5">
+        <button type="button" class="text-base bg-[#F5F5F5] text-[#000000DE] px-4 py-2 rounded w-[75px]" data-action="form-steps#previous">Back</button>
+        <button type="button" class="text-base bg-[#3F51B5] text-white px-4 py-2 rounded w-[75px]" data-action="form-steps#next">Next</button>
+    </div>
+</div>

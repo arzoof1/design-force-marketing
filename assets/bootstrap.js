@@ -1,5 +1,15 @@
-import { startStimulusApp } from '@symfony/stimulus-bundle';
+import { startStimulusApp } from '@symfony/stimulus-bridge';
 
-const app = startStimulusApp();
-// register any custom, 3rd party controllers here
-// app.register('some_controller_name', SomeImportedController);
+import CollectionController from './controllers/collection_controller.js';
+import FormStepController from './controllers/form_steps_controller.js';
+
+const app = startStimulusApp(require.context(
+    './controllers',
+    true,
+    /\.(j|t)sx?$/
+));
+
+// Registered stimulus controllers
+app.register('collection', CollectionController);
+app.register('form-steps', FormStepController);
+export default app;

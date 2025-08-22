@@ -1,0 +1,18 @@
+<!-- Bottom Action Area -->
+<div class="bg-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {% if route_name is defined and route_name %}
+            <p class="font-['Roboto'] font-normal text-[16px] leading-[24px] tracking-[0.5px] text-center text-gray-900 mb-4">Ready to continue?</p>
+        {% endif %}
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{{ path('app_home') }}" type="button" class="p-4 rounded bg-[#82B1FF] text-white font-medium transition-colors">
+                SAVE AND EXIT
+            </a>
+            {% if route_name is defined and route_name %}
+                <a href="{{ path(route_name) }}" type="button" class="p-4 rounded bg-[#3F51B5] text-white font-medium transition-colors">
+                    CONTINUE
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>

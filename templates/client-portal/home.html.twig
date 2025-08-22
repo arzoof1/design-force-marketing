@@ -1,0 +1,201 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}{% endblock %}  {# hide header #}
+{% block navbar %}{% endblock %}  {# or keep/remove nav #}
+
+{% block body %}
+    <main class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
+        <!-- Greeting -->
+        <section class="mb-4">
+            <div>
+                <h1 class="font-roboto font-bold text-4xl leading-[40px] tracking-[0.25px] text-[#003A70]">
+                    Hello Paisley Grille,
+                </h1>
+                <p class="font-roboto font-normal text-[34px] leading-[40px] tracking-[0.25px] text-[#000000DE]">
+                    Your success starts here with Design Force Marketing!
+                </p>
+                <div class="p-4">
+                    <!-- Address chip -->
+                    <div class="flex items-center space-x-2 gap-3 py-4 px-2">
+                        <img src="{{ asset('assets/images/icons/profile.svg') }}" alt="Profile Icon" class="w-6 h-6">
+                        <p class="font-normal text-base leading-6 tracking-[0.5px] align-middle text-[#2196F3]">
+                            1307 S Beacon Blvd, Grand Haven, MI 49417
+                        </p>
+                    </div>
+
+                    <!-- Phone chip -->
+                    <div class="flex items-center space-x-2 gap-3 py-4 px-2">
+                        <img src="{{ asset('assets/images/icons/profile.svg') }}" alt="Profile Icon" class="w-6 h-6">
+                        <p class="font-normal text-base leading-6 tracking-[0.5px] align-middle text-[#2196F3]">
+                            <a href="tel:6163440056" class="text-inherit underline">
+                                (616) 344-0056
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Instructions -->
+        <section class="mb-6">
+            <h2 class="font-bold text-base leading-6 tracking-[0.5px] align-middle text-[#000000DE]">
+                7 Steps for your success
+            </h2>
+            <div class="flex item-start rounded-[16px] p-6 gap-[18px] bg-[#F0F0F0] opacity-100 mt-[10px]">
+                <img src="{{ asset('assets/images/icons/information.svg') }}" alt="Information Icon" class="w-5 h-5 mt-[5px]">
+                <p class="font-normal text-sm leading-5 align-middle text-[#0000008A]">Click under one of the 7 sections and fill out each section to completion. Please complete within the next 7 business days and <strong>prior to your initial creative meeting</strong></p>
+            </div>
+        </section>
+        <!-- Steps -->
+        <section data-controller="portal-steps">
+            <div>
+                <!-- Client Info -->
+                <a href="{{ path('client_info') }}">
+                    <div class="rounded border bg-white shadow-[0px_3px_9px_0px_#00000017] cursor-pointer py-6 pl-8 pr-3 mb-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-6">
+                                <img src="{{ asset('assets/images/icons/client-info.svg') }}" alt="Client Info icon" class="h-12 w-12" />
+                                <div>
+                                    <h3 class="font-bold text-base leading-6 tracking-wide text-[#000000DE]">Client Info</h3>
+                                    <p class="font-normal text-sm leading-5 text-[#0000008A] mb-2"> Lorem ipsum dolor sit amet consectetur. Platea elementum maecenas a non arcu et egestas quam. </p>
+                                    <span class="px-3 py-1 rounded-full font-semibold text-sm leading-5 text-center text-[#FFFFFF] align-middle rounded-[16px] bg-[#81C344]">Complete</span>
+                                </div>
+                            </div>
+                            <div>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.98437 17.0156L9.98437 6.98437L15 12L9.98437 17.0156Z" fill="black" fill-opacity="0.54" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Payment Info -->
+                <a href="{{ path('payment_info') }}">
+                    <div class="rounded border bg-white shadow-[0px_3px_9px_0px_#00000017] cursor-pointer py-6 pl-8 pr-3 mb-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-6">
+                                <img src="{{ asset('assets/images/icons/payment-info.svg') }}" alt="Payment Info icon" class="h-12 w-12" />
+                                <div>
+                                    <h3 class="font-bold text-base leading-6 tracking-wide text-[#000000DE]">Payment Info</h3>
+                                    <p class="font-normal text-sm leading-5 text-[#0000008A] mb-2"> Lorem ipsum dolor sit amet consectetur. Platea elementum maecenas a non arcu et egestas quam. </p>
+                                    <span class="px-3 py-1 rounded-full font-semibold text-sm leading-5 text-center text-[#FFFFFF] align-middle rounded-[16px] bg-[#003A70]">In Progress</span>
+                                </div>
+                            </div>
+                            <div>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.98437 17.0156L9.98437 6.98437L15 12L9.98437 17.0156Z" fill="black" fill-opacity="0.54" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Domain & Email Access -->
+                <a href="{{ path('domain_info') }}">
+                    <div class="rounded border bg-white shadow-[0px_3px_9px_0px_#00000017] cursor-pointer py-6 pl-8 pr-3 mb-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-6">
+                                <img src="{{ asset('assets/images/icons/domain-access.svg') }}" alt="Domain & Email Access icon" class="h-12 w-12" />
+                                <div>
+                                    <h3 class="font-bold text-base leading-6 tracking-wide text-[#000000DE]">Domain & Email Access</h3>
+                                    <p class="font-normal text-sm leading-5 text-[#0000008A] mb-2"> Lorem ipsum dolor sit amet consectetur. Platea elementum maecenas a non arcu et egestas quam. </p>
+                                    <span class="py-2 font-semibold text-sm leading-5 text-[#00000094] align-middle bg-[transparent]">Needs Review</span>
+                                </div>
+                            </div>
+                            <div>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.98437 17.0156L9.98437 6.98437L15 12L9.98437 17.0156Z" fill="black" fill-opacity="0.54" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Social & Reputation Access -->
+                <a href="{{ path('social_info') }}">
+                    <div class="rounded border bg-white shadow-[0px_3px_9px_0px_#00000017] cursor-pointer py-6 pl-8 pr-3 mb-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-6">
+                                <img src="{{ asset('assets/images/icons/social-access.svg') }}" alt="Social & Reputation Access icon" class="h-12 w-12" />
+                                <div>
+                                    <h3 class="font-bold text-base leading-6 tracking-wide text-[#000000DE]">Social & Reputation Access</h3>
+                                    <p class="font-normal text-sm leading-5 text-[#0000008A] mb-2"> Lorem ipsum dolor sit amet consectetur. Platea elementum maecenas a non arcu et egestas quam. </p>
+                                    <span class="py-2 font-semibold text-sm leading-5 text-[#00000094] align-middle bg-[transparent]">Needs Review</span>
+                                </div>
+                            </div>
+                            <div>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.98437 17.0156L9.98437 6.98437L15 12L9.98437 17.0156Z" fill="black" fill-opacity="0.54" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Branding Assets -->
+                <a href="{{ path('branding_assets') }}">
+                    <div class="rounded border bg-white shadow-[0px_3px_9px_0px_#00000017] cursor-pointer py-6 pl-8 pr-3 mb-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-6">
+                                <img src="{{ asset('assets/images/icons/branding-assets.svg') }}" alt="Branding Assets icon" class="h-12 w-12" />
+                                <div>
+                                    <h3 class="font-bold text-base leading-6 tracking-wide text-[#000000DE]">Branding Assets</h3>
+                                    <p class="font-normal text-sm leading-5 text-[#0000008A] mb-2"> Lorem ipsum dolor sit amet consectetur. Platea elementum maecenas a non arcu et egestas quam. </p>
+                                    <span class="py-2 font-semibold text-sm leading-5 text-[#00000094] align-middle bg-[transparent]">Needs Review</span>
+                                </div>
+                            </div>
+                            <div>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.98437 17.0156L9.98437 6.98437L15 12L9.98437 17.0156Z" fill="black" fill-opacity="0.54" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Business Questions -->
+                <a href="{{ path('business_questions') }}">
+                    <div class="rounded border bg-white shadow-[0px_3px_9px_0px_#00000017] cursor-pointer py-6 pl-8 pr-3 mb-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-6">
+                                <img src="{{ asset('assets/images/icons/business-questions.svg') }}" alt="Business Questions icon" class="h-12 w-12" />
+                                <div>
+                                    <h3 class="font-bold text-base leading-6 tracking-wide text-[#000000DE]">Business Questions</h3>
+                                    <p class="font-normal text-sm leading-5 text-[#0000008A] mb-2"> Lorem ipsum dolor sit amet consectetur. Platea elementum maecenas a non arcu et egestas quam. </p>
+                                    <span class="py-2 font-semibold text-sm leading-5 text-[#00000094] align-middle bg-[transparent]">Needs Review</span>
+                                </div>
+                            </div>
+                            <div>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.98437 17.0156L9.98437 6.98437L15 12L9.98437 17.0156Z" fill="black" fill-opacity="0.54" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Additional Services -->
+                <a href="{{ path('additional_services') }}">
+                    <div class="rounded border bg-white shadow-[0px_3px_9px_0px_#00000017] cursor-pointer py-6 pl-8 pr-3 mb-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-6">
+                                <img src="{{ asset('assets/images/icons/additional-services.svg') }}" alt="Additional Services icon" class="h-12 w-12" />
+                                <div>
+                                    <h3 class="font-bold text-base leading-6 tracking-wide text-[#000000DE]">Additional Services</h3>
+                                    <p class="font-normal text-sm leading-5 text-[#0000008A] mb-2"> Lorem ipsum dolor sit amet consectetur. Platea elementum maecenas a non arcu et egestas quam. </p>
+                                    <span class="py-2 font-semibold text-sm leading-5 text-[#00000094] align-middle bg-[transparent]">Needs Review</span>
+                                </div>
+                            </div>
+                            <div>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.98437 17.0156L9.98437 6.98437L15 12L9.98437 17.0156Z" fill="black" fill-opacity="0.54" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+{% endblock %}

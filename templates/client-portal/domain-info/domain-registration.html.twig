@@ -1,0 +1,132 @@
+<section class="pb-5">
+
+    <div class="mb-7">
+        <div class="flex flex-row gap-2">
+            {{ form_widget(form.noDomainsYet, {
+                    attr: {
+                        class: 'appearance-none w-5 h-5 border-2 border-black/60 rounded-sm flex items-center justify-center checked:bg-black checked:border-black checked:before:content-["✓"] checked:before:text-white checked:before:text-sm'
+                    }
+                }) }}
+            <p class="font-normal text-sm leading-5 tracking-normal text-center align-middle text-black">I don’t have any domains yet</p>
+        </div>
+    </div>
+
+    <div class="border-b border-black border-b-[1px] pb-1">
+        <h5 class="font-bold text-base leading-6 tracking-[0.5px]">
+            Domain Registration (Required)
+        </h5>
+    </div>
+
+    <div class="flex flex-col my-7">
+        
+        <div class="flex flex-col gap-2.5">
+
+            <!-- Domain Url -->
+            <div>
+                {{ form_widget(form.domainUrl, {
+                    attr: {
+                        placeholder: 'Domain Url',
+                        class: 'w-full h-[50px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                                placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE]
+                                focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                active:border-blue-500 active:ring-2 active:ring-blue-200'
+                    }
+                }) }}
+            </div>
+
+            <!-- Account Type -->
+            <div class="grid grid-cols-3 justify-between gap-2.5">
+                {% for choice in form.accountType %}
+                    <div class="col-span-3 md:col-span-1 lg:col-span-1 py-4">
+                        <div class="flex flex-row items-center gap-2.5">
+                            {{ form_widget(choice, {
+                                attr: { class: 'appearance-none w-4 h-4 rounded-full border-2 border-black/60
+                                                flex items-center justify-center
+                                                checked:border-black checked:bg-black
+                                                checked:before:content-[""] checked:before:w-2 checked:before:h-2
+                                                checked:before:rounded-full checked:before:bg-white
+                                                focus:ring-2 focus:ring-blue-200' }
+                            }) }}
+                            <p class="font-normal text-sm leading-5 tracking-normal text-center align-middle text-black">{{ form_label(choice) }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- Domain Type -->
+            <div>
+                {{ form_widget(form.domainType, {
+                    attr: {
+                        placeholder: 'Domain Type',
+                        class: 'w-full h-[50px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                                placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE]
+                                focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                active:border-blue-500 active:ring-2 active:ring-blue-200'
+                    }
+                }) }}
+            </div>
+
+            <!-- Domain Registrar -->
+            <div>
+                {{ form_widget(form.domainRegistrar, {
+                    attr: {
+                        placeholder: 'Link to Domain Registrar (ex. https://godaddy.com)',
+                        class: 'w-full h-[50px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                                placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE]
+                                focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                active:border-blue-500 active:ring-2 active:ring-blue-200'
+                    }
+                }) }}
+            </div>
+
+            <!-- Username -->
+            <div>
+                {{ form_widget(form.userName, {
+                    attr: {
+                        placeholder: 'Username *',
+                        class: 'w-full h-[50px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                                placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE]
+                                focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                active:border-blue-500 active:ring-2 active:ring-blue-200'
+                    }
+                }) }}
+            </div>
+
+            <!-- Password -->
+            <div>
+                {{ form_widget(form.password, {
+                    attr: {
+                        placeholder: 'Password *',
+                        class: 'w-full h-[50px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                                placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE]
+                                focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                active:border-blue-500 active:ring-2 active:ring-blue-200'
+                    }
+                }) }}
+            </div>
+
+            <!-- Confirm Password -->
+            <div>
+                {{ form_widget(form.confirmPassword, {
+                    attr: {
+                        placeholder: 'Confirm Password *',
+                        class: 'w-full h-[50px] rounded border border-[#0000006B] px-2 py-3 opacity-100 
+                                placeholder:font-normal placeholder:text-base placeholder:leading-6 placeholder:tracking-[0.5px] placeholder:align-middle placeholder:text-[#000000DE]
+                                focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
+                                active:border-blue-500 active:ring-2 active:ring-blue-200'
+                    }
+                }) }}
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Button -->
+    <div class="flex flex-row items-center cursor-pointer gap-3 mt-5" data-action="click->credit-card-form#add">
+        <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4">
+            <path d="M7.50008 1.1665V12.8332M1.66675 6.99984H13.3334" stroke="#3F51B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="font-medium text-sm leading-9 tracking-[1.25px] uppercase text-[#3F51B5]">Add an Additional Payment Method</p>
+    </div>
+
+</section>
